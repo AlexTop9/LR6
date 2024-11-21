@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Секция" id="7">
+			<DataPath>Объект.Секция</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СекцияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СекцияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ДатаЗанятия" id="10">
+			<DataPath>Объект.ДатаЗанятия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаЗанятияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДатаЗанятияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Table name="Участники" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Участники</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УчастникиКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="УчастникиКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="УчастникиРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="УчастникиСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>Участники</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчастникиСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="УчастникиСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УчастникиСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>Участники</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчастникиСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="УчастникиСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УчастникиУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>Участники</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УчастникиУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="УчастникиУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="УчастникиНомерСтроки" id="26">
+					<DataPath>Объект.Участники.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="УчастникиНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<InputField name="УчастникиФИО" id="35">
+					<DataPath>Объект.Участники.ФИО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Секции</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Объект.Секция</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="УчастникиФИОКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="УчастникиФИОРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<LabelField name="УчастникиКатегорияКатегория" id="41">
+					<DataPath>1/0:a58c6047-930b-4d96-bb3c-e741f22bd3bf/0:bbbb45da-1397-41c1-9cf6-4e45923588a3/0:232a9773-44a4-405e-9783-71a5e13e2000</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиКатегорияКатегорияКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="УчастникиКатегорияКатегорияРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<InputField name="УчастникиКатегория" id="44">
+					<DataPath>Объект.Участники.ФИО.Категория</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиКатегорияКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="УчастникиКатегорияРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<CheckBoxField name="УчастникиПосещаемость" id="38">
+					<DataPath>Объект.Участники.Посещаемость</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчастникиПосещаемостьКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="УчастникиПосещаемостьРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Посещаемость</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

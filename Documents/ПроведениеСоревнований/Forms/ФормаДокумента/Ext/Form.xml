@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="СоревнованиеСсылкаНаименование" id="38">
+			<DataPath>Объект.Соревнование</DataPath>
+			<ContextMenu name="СоревнованиеСсылкаНаименованиеКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="СоревнованиеСсылкаНаименованиеРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<InputField name="ДатаСоревнования" id="7">
+			<DataPath>1/0:d1a54e7f-1341-48b5-8b5a-f61a57a4625b</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаСоревнованияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДатаСоревнованияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Секция" id="50">
+			<DataPath>Объект.Соревнование.Секция</DataPath>
+			<ContextMenu name="СекцияКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="СекцияРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<InputField name="СоревнованиеСсылкаДатаСоревнования" id="41">
+			<DataPath>Объект.Соревнование.Ref.ДатаСоревнования</DataPath>
+			<ContextMenu name="СоревнованиеСсылкаДатаСоревнованияКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="СоревнованиеСсылкаДатаСоревнованияРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<Table name="Участники" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Участники</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УчастникиКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="УчастникиКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="УчастникиРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="УчастникиСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Участники</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчастникиСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="УчастникиСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УчастникиСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Участники</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчастникиСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="УчастникиСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УчастникиУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Участники</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УчастникиУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="УчастникиУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="УчастникиНомерСтроки" id="23">
+					<DataPath>Объект.Участники.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="УчастникиНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="УчастникиФИО" id="26">
+					<DataPath>Объект.Участники.ФИО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameters>
+						<app:item name="Отбор.Категория">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="v8:FixedArray">
+									<v8:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.Категория.EnumValue.Спортсмен</Value>
+									</v8:Value>
+									<v8:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.Категория.EnumValue.Тренер</Value>
+									</v8:Value>
+								</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="УчастникиФИОКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="УчастникиФИОРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="26b8cded-3de1-4118-90ea-08e3cde193ec">УчастникиФИООбработкаНавигационнойСсылкиМножественногоЗначения</Event>
+					</Events>
+				</InputField>
+				<InputField name="УчастникиДатаРождения" id="29">
+					<DataPath>Объект.Участники.ФИО.Ref.ДатаРождения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиДатаРожденияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="УчастникиДатаРожденияРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="УчастникиВозраст" id="32">
+					<DataPath>Объект.Участники.ФИО.Ref.Возраст</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиВозрастКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="УчастникиВозрастРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="УчастникиКатегория" id="35">
+					<DataPath>Объект.Участники.ФИО.Ref.Категория</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиКатегорияКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="УчастникиКатегорияРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="УчастникиРезультат" id="44">
+					<DataPath>Объект.Участники.Результат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиРезультатКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="УчастникиРезультатРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="УчастникиМинуты" id="53">
+					<DataPath>1/0:59849fe5-fe87-4b91-85e6-b363effbc4bc/0:324d6e3c-40ca-43df-89c9-0b24875875a5</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиМинутыКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="УчастникиМинутыРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="УчастникиОценка" id="47">
+					<DataPath>1/0:59849fe5-fe87-4b91-85e6-b363effbc4bc/0:31389a0e-a516-4cd8-94c7-378f98d20725</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчастникиОценкаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="УчастникиОценкаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПроведениеСоревнований</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
